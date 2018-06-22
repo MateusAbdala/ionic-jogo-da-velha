@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, PopoverController } from 'ionic-angular';
+import { PopoverComponent } from '../../components/popover/popover';
 
 @Component({
   selector: 'page-home',
@@ -16,8 +17,15 @@ export class HomePage {
   winner = null;
   draw = null;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public popoverCtrl: PopoverController) {
 
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverComponent);
+    popover.present({
+      ev: myEvent
+    });
   }
 
   get gameStatusMessage(){
