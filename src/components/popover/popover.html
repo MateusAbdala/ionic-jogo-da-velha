@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-list-header>Configurações</ion-list-header>
+  <ion-item-divider color="light">
+    <ion-label>Jogar com um amigo</ion-label>
+    <ion-toggle checked="false" (tap)="mudaModo();"></ion-toggle>
+  </ion-item-divider>
+  <ion-item>
+    <ion-label floating>Jogador 1</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>  
+  <ion-item *ngIf="multiplayer">
+    <ion-label floating>Jogador 2</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+</ion-list>
