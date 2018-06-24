@@ -13,7 +13,7 @@ export class HomePage {
   player = 'X';
   playername = null;
   player1 = 'Mateus';
-  player2 = 'Liliana';
+  player2 = 'Lika';
   winner = null;
   draw = null;
 
@@ -22,7 +22,10 @@ export class HomePage {
   }
 
   presentPopover(myEvent) {
-    let popover = this.popoverCtrl.create(PopoverComponent);
+    let popover = this.popoverCtrl.create(PopoverComponent,{
+      player1: this.player1,
+      player2: this.player2
+    });
     popover.present({
       ev: myEvent
     });
