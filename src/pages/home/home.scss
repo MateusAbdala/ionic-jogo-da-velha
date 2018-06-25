@@ -22,10 +22,6 @@ page-home {
         margin: 0px;
         padding: 15px;
         width: 100%;
-        &:hover {
-            background-color: $background_color_3;
-            cursor: pointer;
-        }
     }
     .quadrado {
         box-shadow: 0 1px 20px black;
@@ -37,6 +33,7 @@ page-home {
         font-family: $font_family_2;
         text-align: center;
         &:hover {
+            cursor: pointer;
             background-color: $background_color_3;
         }
     }

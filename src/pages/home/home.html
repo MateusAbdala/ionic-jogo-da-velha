@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="theme">
     <ion-title>Jogo</ion-title>
     <ion-buttons end>
     <button ion-button icon-only (click)="presentPopover($event)">
@@ -10,6 +10,7 @@
 </ion-header>
 
 <ion-content padding>
+
   <div class="gameStatus" text-uppercase>
       {{gameStatusMessage}}
   </div>
@@ -21,4 +22,5 @@
     </ion-row>
   </ion-grid>
   <button class="restart" (click)="restartGame()">Novo Jogo</button>
+  
 </ion-content>
