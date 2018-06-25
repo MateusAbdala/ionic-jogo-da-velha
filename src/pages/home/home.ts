@@ -8,38 +8,46 @@ import { PopoverComponent } from '../../components/popover/popover';
 })
 export class HomePage {
 
+  multiplayer: boolean = true;
   squares = Array(9).fill(null);
   turn = null;
+  // let player define se o turno é igual a 'X' ou 'O'
   player = 'X';
   playername = null;
   player1 = 'Mateus';
-  player2 = 'Lika';
+  player2 = 'Liliana';
   winner = null;
   draw = null;
 
   constructor(public navCtrl: NavController, public popoverCtrl: PopoverController) {
-
-  }
+      
+  }  
 
   presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverComponent,{
       player1: this.player1,
-      player2: this.player2
+      player2: this.player2,
+      multiplayer: this.multiplayer
     });
     popover.present({
       ev: myEvent
     });
+    popover.onDidDismiss(data => {
+      console.log(data)
+      if(data!=null){
+         this.player1 = data.player1,
+         this.player2 = data.player2,
+         this.multiplayer = data.multiplayer
+      }
+    })
   }
 
   get gameStatusMessage(){
     this.playername = (this.player === 'X') ? this.player1 : this.player2;
     return this.winner? `${this.winner} Ganhou!` : this.draw? `Empate!` : `É a sua vez ${this.playername}`;
-    // return this.winner? `${this.winner} Ganhou!` : 
-    // `É a sua vez ${this.playername}`;
   }
 
   handleMove(position) {
-
     //verifica se há um vencedor
     if(!this.winner){
         //verifica se a posição está livre

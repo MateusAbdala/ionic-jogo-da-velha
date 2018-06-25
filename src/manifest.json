@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "Jogo Da Velha",
+  "short_name": "Jogo da Velha",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

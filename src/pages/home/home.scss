@@ -1,13 +1,4 @@
 page-home {    
-    $color_1: #fff;
-    $color_2: #34495e;
-    $color_3: #32a494;
-    $font_family_1: 'Dosis', Helvetica, sans-serif;
-    $font_family_2: 'Gochi Hand', sans-serif;
-    $background_color_1: #0e8279;
-    $background_color_2: #34495e;
-    $background_color_3: #c1cdcd;
-
     .tabuleiro {
         background-color: $background_color_1;
         color: $color_1;
@@ -17,7 +8,6 @@ page-home {
         padding: 15px;
         color: $color_2;
         font-family: $font_family_1;
-        text-transform: uppercase;
         font-size: 3em;
         font-weight: bold;
         text-align: center;
