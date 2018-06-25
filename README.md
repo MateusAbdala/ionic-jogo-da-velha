@@ -15,7 +15,7 @@ _Note: You may need to add “sudo” in front of any global commands to install
 
 
 ## Install cordova plugin Dependencies
-Run this command on your terminal to add a platform and install all needed puglins:
+Run this command on your terminal to add a platform and install all needed plugins:
 
 iOS:
 ```sh
