@@ -1,5 +1,11 @@
 // http://ionicframework.com/docs/theming/
 @import url(//fonts.googleapis.com/css?family=Dosis|Gochi+Hand:400italic,700italic,400,700);
+@font-face {
+    font-family: 'Gochi Hand';
+    src: url('./assets/fonts/GochiHand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 ion-content{
     background: linear-gradient(to bottom right, #0d766d, #17cebf);
 }
